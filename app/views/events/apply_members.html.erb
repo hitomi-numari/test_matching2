@@ -1,0 +1,5 @@
+<h2>応募者一覧</h2>
+<% @event.applies.each do |apply| %>
+  <%= apply.user.name %>
+  <%= link_to apply.status, apply_toggle_status_path(apply), method: :patch %>
+<% end %>
